@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# :rocket: Introduction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> [!NOTE]\
+> We will update the information again.
 
-## Available Scripts
+## :ledger: Index
 
-In the project directory, you can run:
+> [!NOTE]\
+> We will update the information again.
 
-### `npm start`
+## :beginner: About
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> [!NOTE]\
+> We will update the information again.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## :zap: Usage
 
-### `npm test`
+> [!NOTE]\
+> We will update the information again.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### :electric_plug: Installation
 
-### `npm run build`
+> [!NOTE]\
+> We will update the information again.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### :package: Commands
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> [!NOTE]\
+> We will update the information again.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## :wrench: Development
 
-### `npm run eject`
+> [!NOTE]\
+> We will update the information again.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### :notebook: Pre-Requisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> [!NOTE]\
+> We will update the information again.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### :nut_and_bolt: Development Environment
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+> [!NOTE]\
+> We will update the information again.
 
-## Learn More
+### :file_folder: File Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-  File Structure of the project is as follows:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> [!NOTE]\
+> We will update the information again.
 
-### Code Splitting
+### :hammer: Build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+> [!NOTE]\
+> We will update the information again.
 
-### Analyzing the Bundle Size
+### :rocket: Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+> [!NOTE]\
+> We will update the information again.
 
-### Making a Progressive Web App
+## :cherry_blossom: Community
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+> [!NOTE]\
+> We will update the information again.
 
-### Advanced Configuration
+### :fire: Contribution
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+> [!NOTE]\
+> We will update the information again.
 
-### Deployment
+### :cactus: Branches
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+> [!NOTE]\
+> We will update the information again.
 
-### `npm run build` fails to minify
+### :exclamation: Guideline
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> [!NOTE]\
+> We will update the information again.
+
+## :question: FAQ
+
+> [!NOTE]\
+> We will update the information again.
+
+## :page_facing_up: Resources
+
+> [!NOTE]\
+> We will update the information again.
+
+## :camera: Gallery
+
+> [!NOTE]\
+> We will update the information again.
+
+## :star2: Credit/Acknowledgment
+
+> [!NOTE]\
+> We will update the information again.
+
+## :lock: License
+
+> [!NOTE]\
+> We will update the information again.
