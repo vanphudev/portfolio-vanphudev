@@ -2,19 +2,21 @@ import {Link as LinkR} from "react-router-dom";
 import styled from "styled-components";
 
 export const Nav = styled.div`
-   background-color: red;
+   background-color: ${({theme}) => theme.card_light + 99};
    height: 80px;
    display: flex;
    align-items: center;
    justify-content: center;
    font-size: 1rem;
    position: sticky;
+   backdrop-filter: blur(2px);
    top: 0;
    z-index: 10;
    @media (max-width: 960px) {
       trastion: 0.8s all ease;
    }
 `;
+
 export const NavbarContainer = styled.div`
    display: flex;
    justify-content: space-between;

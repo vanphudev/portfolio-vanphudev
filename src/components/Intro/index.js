@@ -10,6 +10,7 @@ import {
    Span,
    SubTitle,
    ResumeButton,
+   ButtonAbout,
    Img,
 } from "./IntroStyleSection.js";
 import IntroBgAnimation from "../IntroBgAnimation/index";
@@ -43,9 +44,11 @@ const IntroSections = () => {
                         </Span>
                      </TextLoop>
                      <SubTitle>{Biography.description}</SubTitle>
-                     <ResumeButton href={Biography.resume} target='display'>
-                        Download CV
+                     <ResumeButton href={Biography.cv_download} target='_parent'>
+                        Download My CV
                      </ResumeButton>
+                     
+                     <ButtonAbout to='/about'>About Me</ButtonAbout>
                   </HeroLeftContainer>
                   <HeroRightContainer id='Right'>
                      <Img src={HeroImg} alt='hero-image' />
