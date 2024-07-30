@@ -40,6 +40,7 @@ export const Title = styled.div`
 export const Desc = styled.div`
    font-size: 18px;
    text-align: center;
+   padding: 0 20px;
    max-width: 600px;
    color: ${({theme}) => theme.text_secondary};
    @media (max-width: 768px) {
@@ -72,6 +73,10 @@ const Skill = styled.div`
       max-width: 330px;
       padding: 10px 36px;
    }
+   @media (max-width: 320px) {
+      max-width: 180px;
+      padding: 10px 36px;
+   }
 `;
 
 const SkillTitle = styled.h2`
@@ -80,6 +85,18 @@ const SkillTitle = styled.h2`
    color: ${({theme}) => theme.text_secondary};
    margin-bottom: 20px;
    text-align: center;
+   @media (max-width: 974px) {
+      font-size: 24px;
+   }
+   @media (max-width: 768px) {
+      font-size: 20px;
+   }
+   @media (max-width: 480px) {
+      font-size: 18px;
+   }
+   @media (max-width: 320px) {
+      font-size: 15px;
+   }
 `;
 
 const SkillList = styled.div`
@@ -123,12 +140,12 @@ const Skills = () => {
             <Title>Skills</Title>
             <Desc>Here are some of my skills on which I have been working on for the past 2 years.</Desc>
             <SkillsContainer>
-               {skills.map((skill) => (
-                  <Skill>
+               {skills.map((skill, index) => (
+                  <Skill key={index}>
                      <SkillTitle>{skill.title}</SkillTitle>
                      <SkillList>
-                        {skill.skills.map((item) => (
-                           <SkillItem>
+                        {skill.skills.map((item, index) => (
+                           <SkillItem key={index}>
                               <SkillImage src={item.image} />
                               {item.name}
                            </SkillItem>

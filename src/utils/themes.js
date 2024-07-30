@@ -1,5 +1,5 @@
 export const darkTheme = {
-   bg: "#1C1C27",
+   bg: "#191924",
    bgLight: "#1C1E27",
    primary: "#1B8B00",
    text_primary: "#F2F3F4",
@@ -9,6 +9,7 @@ export const darkTheme = {
    button: "#1B8B00",
    white: "#FFFFFF",
    black: "#000000",
+   bgBlur: "rgb(255 255 255 / 30%)",
 };
 
 export const lightTheme = {
@@ -19,4 +20,5 @@ export const lightTheme = {
    text_secondary: "#48494a",
    card: "#FFFFFF",
    button: "#5c5b5b",
+   bgBlur: "rgba(0, 0, 0, 0.4);",
 };

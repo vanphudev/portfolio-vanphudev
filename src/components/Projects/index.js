@@ -24,7 +24,7 @@ const Projects = ({openModal, setOpenModal}) => {
             </Desc>
             <ToggleButtonGroup>
                {toggle === "all" ? (
-                  <ToggleButton active value='all' onClick={() => setToggle("all")}>
+                  <ToggleButton active='true' value='all' onClick={() => setToggle("all")}>
                      All
                   </ToggleButton>
                ) : (
@@ -34,7 +34,7 @@ const Projects = ({openModal, setOpenModal}) => {
                )}
                <Divider />
                {toggle === "web app" ? (
-                  <ToggleButton active value='web app' onClick={() => setToggle("web app")}>
+                  <ToggleButton active='true' value='web app' onClick={() => setToggle("web app")}>
                      WEBSITE APP'S
                   </ToggleButton>
                ) : (
@@ -44,7 +44,7 @@ const Projects = ({openModal, setOpenModal}) => {
                )}
                <Divider />
                {toggle === "android app" ? (
-                  <ToggleButton active value='android app' onClick={() => setToggle("android app")}>
+                  <ToggleButton active='true' value='android app' onClick={() => setToggle("android app")}>
                      WINDOWS APP'S
                   </ToggleButton>
                ) : (
@@ -55,13 +55,13 @@ const Projects = ({openModal, setOpenModal}) => {
             </ToggleButtonGroup>
             <CardContainer>
                {toggle === "all" &&
-                  projects.map((project) => (
-                     <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal} />
+                  projects.map((project, index) => (
+                     <ProjectCard key={index} project={project} openModal={openModal} setOpenModal={setOpenModal} />
                   ))}
                {projects
-                  .filter((item) => item.category == toggle)
-                  .map((project) => (
-                     <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal} />
+                  .filter((item) => item.category === toggle)
+                  .map((project, index) => (
+                     <ProjectCard key={index} project={project} openModal={openModal} setOpenModal={setOpenModal} />
                   ))}
             </CardContainer>
          </Wrapper>

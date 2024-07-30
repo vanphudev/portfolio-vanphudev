@@ -2,18 +2,24 @@ import {Link as LinkR} from "react-router-dom";
 import styled from "styled-components";
 
 export const Nav = styled.div`
-   background-color: ${({theme}) => theme.card_light + 99};
+   background-color: ${({third, theme}) => (third === "true" ? theme.bgBlur : theme.card_light)};
    height: 80px;
+   transition: all 0.5s ease-in-out;
+   width: 1300px;
+   ${({third}) => (third === "true" ? "width: 1300px" : "")};
    display: flex;
    align-items: center;
    justify-content: center;
    font-size: 1rem;
+   margin: 0 auto;
+   ${({third}) => (third === "true" ? "border-radius: 10px;" : "")};
    position: sticky;
    backdrop-filter: blur(2px);
-   top: 0;
+   top: ${({third}) => (third === "true" ? "20px" : "0px")};
    z-index: 10;
-   @media (max-width: 960px) {
-      trastion: 0.8s all ease;
+   @media (max-width: 1300px) {
+      width: 100%;
+      background-color: ${({theme}) => theme.card_light + 99};)};
    }
 `;
 
@@ -156,13 +162,11 @@ export const MobileMenu = styled.div`
    gap: 16px;
    position: absolute;
    top: 80px;
-   right: 0;
    width: 100%;
-   height: 200px;
-   overflow-y: scroll;
-   padding: 12px;
+   height: max-content;
+   padding: 20px;
    background: ${({theme}) => theme.card_light + 99};
-   backdrop-filter: blur(2px);
+   backdrop-filter: blur(20px);
    transition: width 0.3s ease, padding 0.3s ease, justify-content 0.3s ease;
    transform: ${({isOpen}) => (isOpen ? "translateY(0)" : "translateY(-100%)")};
    border-radius: 0 0 20px 20px;

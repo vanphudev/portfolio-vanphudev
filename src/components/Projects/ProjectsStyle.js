@@ -42,6 +42,7 @@ export const Desc = styled.div`
    font-size: 18px;
    text-align: center;
    max-width: 600px;
+   padding: 0 20px;
    color: ${({theme}) => theme.text_secondary};
    @media (max-width: 768px) {
       margin-top: 12px;
@@ -58,13 +59,25 @@ export const ToggleButtonGroup = styled.div`
    font-weight: 500;
    margin: 22px 0px;
    @media (max-width: 768px) {
-      font-size: 12px;
+      font-size: 18px;
+   }
+   @media (max-width: 480px) {
+      font-size: 22px;
+      flex-wrap: wrap;
+      flex-direction: column;
+      border-radius: 5px;
+   }
+   @media (max-width: 320px) {
+      font-size: 20px;
+      flex-wrap: wrap;
+      flex-direction: column;
+      border-radius: 5px;
    }
 `;
 
 export const ToggleButton = styled.div`
    padding: 8px 18px;
-   border-radius: 6px;
+   text-align: center;
    cursor: pointer;
    ${({active, theme}) =>
       active &&
@@ -73,11 +86,11 @@ export const ToggleButton = styled.div`
       color: ${theme.white};
     `}
    &:hover {
-      background: ${({theme}) => theme.primary + 8};
+      background: ${({theme}) => theme.primary + 80};
+      color: ${({theme}) => theme.white};
    }
    @media (max-width: 768px) {
       padding: 6px 8px;
-      border-radius: 4px;
    }
 `;
 export const Divider = styled.div`
@@ -91,14 +104,8 @@ export const CardContainer = styled.div`
    align-items: center;
    gap: 28px;
    flex-wrap: wrap;
-   // display: grid;
-   // grid-template-columns: repeat(3, 1fr);
-   // grid-gap: 32px;
-   // grid-auto-rows: minmax(100px, auto);
-   // @media (max-width: 960px) {
-   //     grid-template-columns: repeat(2, 1fr);
-   // }
-   // @media (max-width: 640px) {
-   //     grid-template-columns: repeat(1, 1fr);
-   // }
+   max-width: 500px;
+   @media (max-width: 550px) {
+      width: 90%;
+   }
 `;

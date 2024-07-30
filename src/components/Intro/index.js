@@ -47,7 +47,7 @@ const IntroSections = () => {
                      <ResumeButton href={Biography.cv_download} target='_parent'>
                         Download My CV
                      </ResumeButton>
-                     
+
                      <ButtonAbout to='/about'>About Me</ButtonAbout>
                   </HeroLeftContainer>
                   <HeroRightContainer id='Right'>

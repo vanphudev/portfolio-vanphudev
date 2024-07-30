@@ -172,3 +172,33 @@ export const projects = [
       ],
    },
 ];
+
+export const education = [
+   {
+      id: 0,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg1KtuRhbEuRLAtsHcX5JV_GenWmh5Hg853Q&s",
+      school: "Trường Trung Học Cơ Sở Hàm Thắng 2 - Hàm Thuận Bắc - Bình Thuận",
+      date: "Aug 2014 - Jun 2018",
+      grade: "Junior High School",
+      desc: "I completed my class 9 Junior high school education at Trường Trung Học Cơ Sở Hàm Thắng 2 - Hàm Thuận Bắc - Bình Thuận.",
+      degree: "Student",
+   },
+   {
+      id: 1,
+      img: "https://scontent.fhan3-4.fna.fbcdn.net/v/t39.30808-1/308497667_426864622888740_5095243945393482407_n.jpg?stp=dst-jpg_p200x200&_nc_cat=104&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=7NyZGg_bXlkQ7kNvgE7KfK3&_nc_ht=scontent.fhan3-4.fna&oh=00_AYA1qt6sCIhuAHM8hx9cVgfLwti86rq9-AB5WtOBMchPCQ&oe=66ADBE3C",
+      school: "Trường Trung Học Phổ Thông Phan Chu trinh - Phan Thiết City - Bình Thuận",
+      date: "Aug 2018 - Jun 2021",
+      grade: "High School",
+      desc: "I completed my class 12 High school education at Trường Trung Học Phổ Thông Phan Chu trinh - Phan Thiết City - Bình Thuận.",
+      degree: "Student",
+   },
+   {
+      id: 2,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSose72-aQGXuebKetKNaHXl1uVkxLS0N8lRA&s",
+      school: "Trường Đại Học Công Thương Thành Phố Hồ Chí Minh - HUIT",
+      date: "Sep 2021 - Apr 2025",
+      grade: "University",
+      desc: "I am currently studying Software Engineering at HUIT, HCM City.",
+      degree: "Student (Software Engineering) - Front-End Developer",
+   },
+];

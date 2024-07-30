@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {
    Nav,
    NavLink,
@@ -18,10 +18,26 @@ import {useTheme} from "styled-components";
 import LogoHome from "../../assets/icon/logohome.svg";
 
 const Navbar = () => {
-   const [isOpen, setIsOpen] = React.useState(false);
+   const [isOpen, setIsOpen] = useState(false);
+   const [third, setThird] = useState(false);
    const theme = useTheme();
+   useEffect(() => {
+      const handleScroll = () => {
+         const currentScrollY = window.scrollY;
+         const windowWidth = window.innerWidth;
+         if (currentScrollY > 30 && windowWidth > 1350) {
+            setThird(true);
+         } else {
+            setThird(false);
+         }
+      };
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+         window.removeEventListener("scroll", handleScroll);
+      };
+   }, [third]);
    return (
-      <Nav>
+      <Nav third={third === true ? "true" : "false"}>
          <NavbarContainer>
             <NavLogo to='/'>
                <div
