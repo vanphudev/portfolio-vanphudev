@@ -8,6 +8,7 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import SchoolIcon from "@mui/icons-material/School";
+import {useTheme} from "styled-components";
 import {education} from "../../data/constants";
 import EducationCard from "../Cards/EducationCard";
 
@@ -69,8 +70,9 @@ const ContainerFlex = styled.div`
    padding: 10px;
 `;
 
-const Index = () => {
+const Index = (darkMode) => {
    const [width, setWidth] = useState(window.innerWidth);
+   const theme = useTheme();
    useEffect(() => {
       const handleResize = () => {
          setWidth(window.innerWidth);
@@ -79,7 +81,7 @@ const Index = () => {
       return () => {
          window.removeEventListener("resize", handleResize);
       };
-   }, [width]);
+   }, [width, theme]);
    return (
       <Container id='education'>
          <Wrapper>
@@ -90,7 +92,7 @@ const Index = () => {
             <Timeline position='alternate'>
                {width <= 500
                   ? education.map((education, index) => (
-                       <ContainerFlex>
+                       <ContainerFlex key={index}>
                           <EducationCard education={education}></EducationCard>
                        </ContainerFlex>
                     ))
@@ -99,8 +101,10 @@ const Index = () => {
                           <TimelineOppositeContent
                              sx={{m: "auto 0"}}
                              variant='body2'
-                             color='white'
-                             style={{fontSize: "30px"}}>
+                             style={{
+                                fontSize: "30px",
+                                color: theme.text_primary,
+                             }}>
                              {education.date}
                           </TimelineOppositeContent>
                           <TimelineSeparator>

@@ -16,7 +16,7 @@ const Button = styled.button`
 `;
 const Card = styled.div`
    width: 330px;
-   height: 490px;
+   height: max-content;
    background-color: ${({theme}) => theme.card};
    cursor: pointer;
    border-radius: 10px;
@@ -26,14 +26,20 @@ const Card = styled.div`
    display: flex;
    flex-direction: column;
    gap: 14px;
-   transition: all 0.5s ease-in-out;
+   transition: all 0.3s ease-in-out;
    &:hover {
       transform: translateY(-10px);
-      box-shadow: 0 0 50px 4px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 0 50px 4px ${({theme}) => theme.primary + 80};
       filter: brightness(1.1);
    }
    &:hover ${Button} {
       display: block;
+   }
+   @media (max-width: 480px) {
+      width: 300px;
+   }
+   @media (max-width: 320px) {
+      width: 250px;
    }
 `;
 
@@ -43,6 +49,14 @@ const Image = styled.img`
    background-color: ${({theme}) => theme.white};
    border-radius: 10px;
    box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
+   object-fit: cover;
+   transition: all 0.5s ease-in-out;
+   @media (max-width: 480px) {
+      height: 140px;
+   }
+   @media (max-width: 320px) {
+      height: 100px;
+   }
 `;
 
 const Tags = styled.div`
@@ -144,7 +158,6 @@ const ProjectCards = ({project, setOpenModal}) => {
                <Avatar key={index} src={member.img} />
             ))}
          </Members>
-         {/* <Button>View Project</Button> */}
       </Card>
    );
 };

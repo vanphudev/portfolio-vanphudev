@@ -11,6 +11,7 @@ export const darkTheme = {
    bgBlur: "rgb(255 255 255 / 30%)",
    white: "#FFFFFF",
    black: "#000000",
+   bgNav: "transparent",
 };
 
 export const lightTheme = {
@@ -25,4 +26,5 @@ export const lightTheme = {
    bgBlur: "rgb(255 255 255 / 20%)",
    white: "#FFFFFF",
    black: "#000000",
+   bgNav: "#1B8B00",
 };

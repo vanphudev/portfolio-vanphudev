@@ -1,6 +1,5 @@
 import * as React from "react";
 import {Routes, Route} from "react-router-dom";
-
 const RouterPublic = ({Home, About}) => {
    return (
       <Routes>

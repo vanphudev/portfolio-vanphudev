@@ -20,7 +20,8 @@ const Projects = ({openModal, setOpenModal}) => {
          <Wrapper>
             <Title>Projects</Title>
             <Desc>
-               I have worked on a wide range of projects. From web apps to android apps. Here are some of my projects.
+               Below are the projects I have completed, including personal and group projects utilizing various web
+               technologies.
             </Desc>
             <ToggleButtonGroup>
                {toggle === "all" ? (
@@ -43,26 +44,34 @@ const Projects = ({openModal, setOpenModal}) => {
                   </ToggleButton>
                )}
                <Divider />
-               {toggle === "android app" ? (
-                  <ToggleButton active='true' value='android app' onClick={() => setToggle("android app")}>
+               {toggle === "window app" ? (
+                  <ToggleButton active='true' value='window app' onClick={() => setToggle("window app")}>
                      WINDOWS APP'S
                   </ToggleButton>
                ) : (
-                  <ToggleButton value='android app' onClick={() => setToggle("android app")}>
+                  <ToggleButton value='window app' onClick={() => setToggle("window app")}>
                      WINDOWS APP'S
                   </ToggleButton>
                )}
             </ToggleButtonGroup>
             <CardContainer>
-               {toggle === "all" &&
-                  projects.map((project, index) => (
-                     <ProjectCard key={index} project={project} openModal={openModal} setOpenModal={setOpenModal} />
-                  ))}
-               {projects
-                  .filter((item) => item.category === toggle)
-                  .map((project, index) => (
-                     <ProjectCard key={index} project={project} openModal={openModal} setOpenModal={setOpenModal} />
-                  ))}
+               {toggle === "all" ? (
+                  projects.length > 0 ? (
+                     projects.map((project, index) => (
+                        <ProjectCard key={index} project={project} openModal={openModal} setOpenModal={setOpenModal} />
+                     ))
+                  ) : (
+                     <Desc>I have not updated this project yet. Please check back later!</Desc>
+                  )
+               ) : projects.filter((item) => item.category === toggle).length > 0 ? (
+                  projects
+                     .filter((item) => item.category === toggle)
+                     .map((project, index) => (
+                        <ProjectCard key={index} project={project} openModal={openModal} setOpenModal={setOpenModal} />
+                     ))
+               ) : (
+                  <Desc>I have not updated this project yet. Please check back later!</Desc>
+               )}
             </CardContainer>
          </Wrapper>
       </Container>

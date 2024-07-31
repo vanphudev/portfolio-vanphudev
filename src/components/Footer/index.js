@@ -70,6 +70,11 @@ const NavLink = styled.a`
 const SocialMediaIcons = styled.div`
    display: flex;
    margin-top: 1rem;
+   @media (max-width: 480px) {
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+   }
 `;
 
 const SocialMediaIcon = styled.a`

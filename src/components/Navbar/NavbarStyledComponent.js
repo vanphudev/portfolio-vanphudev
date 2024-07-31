@@ -110,8 +110,7 @@ export const GitHubButton = styled.a`
    border-radius: 20px;
    cursor: pointer;
    color: ${({theme}) => theme.white};
-   ${({theme, darkMode}) =>
-      darkMode === false ? `background-color: ${theme.primary};` : ``};
+   background-color: ${({theme}) => theme.bgNav};
    padding: 0 20px;
    font-weight: 500;
    text-decoration: none;

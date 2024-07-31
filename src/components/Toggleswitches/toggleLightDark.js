@@ -103,12 +103,11 @@ const MySVG = (props) => (
 );
 
 const ToggleLightDark = ({darkMode, setDarkMode}) => {
-   console.log("darkMode: ", darkMode);
    const [isChecked, setIsChecked] = useState(!darkMode);
    const handleChange = (event) => {
       setIsChecked(event.target.checked);
       setDarkMode(!event.target.checked);
-      console.log("isChecked: ", event.target.checked, !event.target.checked);
+      localStorage.setItem("darkMode", JSON.stringify(!event.target.checked));
    };
    return (
       <>

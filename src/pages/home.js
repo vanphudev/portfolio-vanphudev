@@ -19,7 +19,7 @@ const Wrapper = styled.div`
    }
 `;
 
-const Home = () => {
+const Home = (darkMode) => {
    const [openModal, setOpenModal] = useState({state: false, project: null});
    return (
       <>
@@ -29,7 +29,7 @@ const Home = () => {
             <Projects openModal={openModal} setOpenModal={setOpenModal} />
          </Wrapper>
          <Wrapper>
-            <Education />
+            <Education darkMode={darkMode} />
             <Contact />
          </Wrapper>
          {openModal.state && <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />}

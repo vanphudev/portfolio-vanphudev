@@ -4,7 +4,6 @@
    right: 20px;
    bottom: 20px;
    font-size: 17px;
-   display: inline-block;
    width: 5em;
    cursor: pointer;
 }
@@ -17,13 +16,13 @@
 
 @media screen and (max-width: 768px) {
    #theme-toggle-button {
-      width: 3em;
+      width: 3.9em;
    }
 }
 
 @media screen and (max-width: 480px) {
    #theme-toggle-button {
-      width: 2em;
+      width: 3.8em;
    }
 }
 
