@@ -33,7 +33,7 @@ function App() {
                </div>
             ) : (
                <Body>
-                  <Navbar />
+                  <Navbar setDarkMode={setDarkMode} darkMode={darkMode} />
                   <RouterPublic Home={Home} About={About} />
                   <Footer />
                   <ToggleLightDark setDarkMode={setDarkMode} darkMode={darkMode} />

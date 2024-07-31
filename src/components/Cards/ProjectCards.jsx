@@ -94,7 +94,7 @@ const Date = styled.div`
       font-size: 10px;
    }
    &:hover {
-      color: ${({theme}) => theme.white};
+      color: ${({theme}) => theme.primary};
    }
 `;
 

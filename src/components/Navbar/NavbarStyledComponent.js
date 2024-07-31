@@ -83,7 +83,7 @@ export const NavItems = styled.ul`
 `;
 
 export const NavLink = styled.a`
-   color: ${({theme}) => theme.text_primary};
+   color: ${({theme}) => theme.text_nav};
    font-weight: 500;
    cursor: pointer;
    transition: all 0.02s ease-in-out;
@@ -103,13 +103,15 @@ export const GitHubButton = styled.a`
    border: 1px solid ${({theme}) => theme.primary};
    justify-content: center;
    display: flex;
-   width: "max-content";
+   width: max-content;
    white-space: nowrap;
    align-items: center;
    height: 70%;
    border-radius: 20px;
-   color: ${({theme}) => theme.primary};
    cursor: pointer;
+   color: ${({theme}) => theme.white};
+   ${({theme, darkMode}) =>
+      darkMode === false ? `background-color: ${theme.primary};` : ``};
    padding: 0 20px;
    font-weight: 500;
    text-decoration: none;
@@ -122,7 +124,7 @@ export const GitHubButton = styled.a`
 `;
 
 export const ButtonContainer = styled.div`
-   width: "max-content";
+   width: max-content;
    height: 100%;
    display: flex;
    justify-content: end;

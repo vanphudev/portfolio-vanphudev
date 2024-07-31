@@ -17,7 +17,7 @@ import {Biography} from "../../data/constants";
 import {useTheme} from "styled-components";
 import LogoHome from "../../assets/icon/logohome.svg";
 
-const Navbar = () => {
+const Navbar = (setDarkMode, darkMode) => {
    const [isOpen, setIsOpen] = useState(false);
    const [third, setThird] = useState(false);
    const theme = useTheme();
@@ -68,7 +68,7 @@ const Navbar = () => {
                <NavLink href='#education'>Education</NavLink>
             </NavItems>
             <ButtonContainer>
-               <GitHubButton href={Biography.github} target='_blank'>
+               <GitHubButton href={Biography.github} target='_blank' darkMode={darkMode}>
                   Github Profile
                </GitHubButton>
             </ButtonContainer>
