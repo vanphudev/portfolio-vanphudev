@@ -3,7 +3,7 @@ import "../../styles/spinner.scss";
 
 const Spinner = () => {
    return (
-      <div class='music-waves-2'>
+      <div className='music-waves-2'>
          <span></span>
          <span></span>
          <span></span>

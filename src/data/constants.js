@@ -1,5 +1,7 @@
 export const Biography = {
    name: "Nguyễn Văn Phú",
+   image: "https://www.vanphudev.id.vn/image_shares/Image_Personal.jpg",
+   LogoDev: "https://www.vanphudev.id.vn/image_shares/logohome.svg",
    roles: ["Front-End Developer", "UI/UX Designer", "Programmer"],
    description:
       "I am a Software Engineering (SE) student at HUIT, HCM City. I am continuously learning new things about programming and have worked with various languages and technologies.",
@@ -8,8 +10,7 @@ export const Biography = {
    facebook: "https://www.facebook.com/vanphu.huit",
    instagram: "https://www.instagram.com/vanphudev",
    zalo: "https://ln.run/-PmEx",
-   resume: "https://drive.google.com/file/d/1fQw9G6d2JQ5bQ0Y2Fz1bJvz1Qj8r6W0w/view?usp=sharing",
-   cv_download: "https://tinyurl.com/ysdf6huv",
+   cv_download: "https://www.vanphudev.id.vn/cv_shares/CV-NguyenVanPhu-Internship-FrontendDeveloper.pdf",
    cv_view: "https://tinyurl.com/yazam8ur",
 };
 

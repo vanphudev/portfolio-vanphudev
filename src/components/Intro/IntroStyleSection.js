@@ -1,6 +1,5 @@
 import styled, {keyframes} from "styled-components";
 import {Link as LinkR} from "react-router-dom";
-import {Container} from "./../Projects/ProjectsStyle";
 export const HeroContainer = styled.div`
    background: ${({theme}) => theme.card_light};
    display: flex;
@@ -267,13 +266,28 @@ export const ButtonAbout = styled(LinkR)`
    } 
 `;
 
-export const ContainerFollow = styled(Container)`
+export const ContainerFollow = styled.div`
    display: flex;
    justify-content: center;
    align-items: center;
+   flex-direction: column;
    gap: 12px;
-   margin-top: 20px;
-   // @media (max-width: 640px) {
-   //    flex-direction: column;
-   // }
+   position: fixed;
+   left: 0;
+   top: 50%;
+   transform: translateY(-50%);
+   z-index: 999;
+   @media (max-width: 1400px) {
+      display: none;
+   }
+`;
+export const SocialMediaIcon = styled.a`
+   display: inline-block;
+   margin: 0 1rem;
+   color: ${({theme}) => theme.text_primary};
+   cursor: pointer;
+   transition: color 0.2s ease-in-out;
+   &:hover {
+      color: ${({theme}) => theme.primary};
+   }
 `;

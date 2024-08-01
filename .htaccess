@@ -1,4 +1,18 @@
 <IfModule mod_rewrite.c>
-   RewriteEngine On RewriteBase / RewriteRule ^index\.html$ - [L] RewriteCond %{REQUEST_FILENAME} !-f RewriteCond
-   %{REQUEST_FILENAME} !-d RewriteCond %{REQUEST_FILENAME} !-l RewriteRule . /index.html [L]
-</IfModule>
+   RewriteEngine On
+   RewriteBase /
+ 
+   # Nếu yêu cầu đến thư mục /image_shares/, trả về lỗi 403
+   RewriteCond %{REQUEST_URI} ^/image_shares/ [NC]
+   RewriteRule ^ - [F,L]
+ 
+   # Nếu yêu cầu đến index.html, không làm gì cả
+   RewriteRule ^index\.html$ - [L]
+ 
+   # Nếu yêu cầu không phải là tệp thực sự, thư mục hoặc liên kết, chuyển hướng đến index.html
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteCond %{REQUEST_FILENAME} !-d
+   RewriteCond %{REQUEST_FILENAME} !-l
+   RewriteRule . /index.html [L]
+ </IfModule>
+ 

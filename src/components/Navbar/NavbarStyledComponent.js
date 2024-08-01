@@ -11,14 +11,15 @@ export const Nav = styled.div`
    align-items: center;
    justify-content: center;
    font-size: 1rem;
+   box-shadow: ${({third, theme}) => (third === "true" ? theme.boxShadow : "none")};
    margin: 0 auto;
-   border-radius: 10px;
    ${({third}) => (third === "true" ? "border-radius: 10px;" : "")};
    position: sticky;
    backdrop-filter: blur(2px);
    top: ${({third}) => (third === "true" ? "20px" : "0px")};
    z-index: 10;
    @media (max-width: 1300px) {
+      transition: none;
       width: 100%;
       background-color: ${({theme}) => theme.card_light + 99};)};
    }
@@ -39,29 +40,29 @@ export const NavbarContainer = styled.div`
 
 export const NavLogo = styled(LinkR)`
    width: 500px;
-   padding: 0 2px;
+   padding: 0 5px;
    display: flex;
    justify-content: center;
    align-items: center;
    text-decoration: none;
    @media (max-width: 974px) {
       width: 400px;
-      padding: 0 0px;
+      padding: 0 7px;
       justify-content: start;
    }
    @media (max-width: 768px) {
       width: 300px;
-      padding: 0 0px;
+      padding: 0 7px;
       justify-content: start;
    }
    @media (max-width: 480px) {
       width: 250px;
-      padding: 0 0px;
+      padding: 0 7px;
       justify-content: start;
    }
    @media (max-width: 320px) {
       width: 200px;
-      padding: 0 0px;
+      padding: 0 7px;
       justify-content: start;
    }
 `;
@@ -143,6 +144,7 @@ export const MobileIcon = styled.div`
       top: transform: translateY(-50%);
       right: 2px;
       font-size: 2rem;
+      padding: 0 12px; // 12px Logo cách 7px + 4px
       cursor: pointer;
       color: ${({theme}) => theme.text_primary};
    }
@@ -150,8 +152,9 @@ export const MobileIcon = styled.div`
       display: block;
       position: absolute;
       top: transform: translateY(-50%);
-      right: 24px;
+      right: 0px;
       font-size: 1.5rem;
+      padding: 0 12px;
       cursor: pointer;
       color: ${({theme}) => theme.text_primary};
    }
@@ -164,15 +167,18 @@ export const MobileMenu = styled.div`
    gap: 16px;
    position: absolute;
    top: 80px;
-   width: 100%;
+   left: 50%;
+   transform: ${({isOpen}) => (isOpen ? "translate(-50%, 0)" : "translate(-50%, -100%)")};
+   width: 90%;
    height: max-content;
+   max-height: calc(100vh - 100px);
+   overflow-y: auto;
    padding: 20px;
-   background: ${({theme}) => theme.card_light + 99};
+   background-color: ${({theme}) => theme.bgMenuMobile};
    backdrop-filter: blur(20px);
-   transition: width 0.3s ease, padding 0.3s ease, justify-content 0.3s ease;
-   transform: ${({isOpen}) => (isOpen ? "translateY(0)" : "translateY(-100%)")};
-   border-radius: 0 0 20px 20px;
-   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+   transition: width 0.3s ease, padding 0.3s ease, justify-content 0.3s ease, transform 0.3s ease;
+   border-radius: 20px;
+   box-shadow: 0 0 10px 0 rgba(27, 139, 0, 0.711922268907563);
    opacity: ${({isOpen}) => (isOpen ? "100%" : "0")};
    z-index: ${({isOpen}) => (isOpen ? "1000" : "-1000")};
 `;

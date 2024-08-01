@@ -107,7 +107,6 @@ const ToggleLightDark = ({darkMode, setDarkMode}) => {
    const handleChange = (event) => {
       setIsChecked(event.target.checked);
       setDarkMode(!event.target.checked);
-      localStorage.setItem("darkMode", JSON.stringify(!event.target.checked));
    };
    return (
       <>

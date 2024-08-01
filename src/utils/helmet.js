@@ -8,7 +8,7 @@ const MyComponent = () => (
             property='og:description'
             content="Welcome to my portfolio. I'm Nguyễn Văn Phú, a Frontend Developer. Here, you can explore my work in Information Technology. Feel free to reach out if you have any questions."
          />
-         <meta property='og:image' content='https://www.vanphudev.id.vn/Image_Personal.jpg' />
+         <meta property='og:image' content='https://www.vanphudev.id.vn/image_shares/Image_Personal.jpg' />
          <meta property='og:image:alt' content='Nguyễn Văn Phú - vanphudev' />
          <meta property='og:url' content='https://www.vanphudev.id.vn' />
          <meta property='og:site_name' content='www.vanphudev.id.vn' />
