@@ -12,6 +12,7 @@ import {
    ResumeButton,
    ButtonAbout,
    Img,
+   ContainerFollow,
 } from "./IntroStyleSection.js";
 import IntroBgAnimation from "../IntroBgAnimation/index";
 import HeroImg from "../../assets/images/Image_Personal.jpg";
@@ -32,7 +33,7 @@ const IntroSections = () => {
                         Hi there!, I am <br /> {Biography.name}
                      </Title>
                      <TextLoop>
-                        I am a
+                        A
                         <Span>
                            <Typewriter
                               options={{
@@ -48,6 +49,8 @@ const IntroSections = () => {
                         Download My CV
                      </ResumeButton>
                      <ButtonAbout to='/about'>About Me</ButtonAbout>
+                     <ContainerFollow>
+                     </ContainerFollow>
                   </HeroLeftContainer>
                   <HeroRightContainer id='Right'>
                      <Img src={HeroImg} alt='hero-image' />

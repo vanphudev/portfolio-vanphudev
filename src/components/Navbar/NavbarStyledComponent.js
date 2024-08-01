@@ -2,9 +2,9 @@ import {Link as LinkR} from "react-router-dom";
 import styled from "styled-components";
 
 export const Nav = styled.div`
-   background-color: ${({third, theme}) => (third === "true" ? theme.bgBlur : theme.card_light)};
+   background-color: ${({third, theme}) => (third === "true" ? theme.bgBlur : "transparent")};
    height: 80px;
-   transition: all 0.5s ease-in-out;
+   transition: top, bottom, 0.5s ease-in-out;
    width: 1300px;
    ${({third}) => (third === "true" ? "width: 1300px" : "")};
    display: flex;
@@ -12,6 +12,7 @@ export const Nav = styled.div`
    justify-content: center;
    font-size: 1rem;
    margin: 0 auto;
+   border-radius: 10px;
    ${({third}) => (third === "true" ? "border-radius: 10px;" : "")};
    position: sticky;
    backdrop-filter: blur(2px);

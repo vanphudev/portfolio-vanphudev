@@ -9,6 +9,7 @@ import Home from "./pages/home";
 import About from "./pages/about";
 import Footer from "./components/Footer";
 import MyComponent from "./utils/helmet";
+import Spinner from "./components/Spinner/spinner";
 
 const Body = styled.div`
    background-color: ${({theme}) => theme.bg};
@@ -16,22 +17,42 @@ const Body = styled.div`
 `;
 
 function App() {
-   try {
-      JSON.parse(localStorage.getItem("darkMode")) === null
-         ? localStorage.setItem("darkMode", JSON.stringify(true))
-         : JSON.parse(localStorage.getItem("darkMode"));
-   } catch (error) {
-      localStorage.setItem("darkMode", JSON.stringify(true));
-   }
+   const [isLoading, setIsLoading] = useState(true);
    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-   const [darkMode, setDarkMode] = useState(JSON.parse(localStorage.getItem("darkMode")));
+   const [darkMode, setDarkMode] = useState(
+      JSON.parse(localStorage.getItem("darkMode")) === null ||
+         JSON.parse(localStorage.getItem("darkMode")) === undefined ||
+         JSON.parse(localStorage.getItem("darkMode")) === ""
+         ? true
+         : JSON.parse(localStorage.getItem("darkMode"))
+   );
+
    useEffect(() => {
+      console.log("đang chạy useEffect load data");
+      const loadData = () => {
+         return new Promise((resolve) => {
+            setTimeout(() => {
+               resolve();
+            }, 1000);
+         });
+      };
+      loadData().then(() => {
+         setIsLoading(false);
+      });
+   }, []);
+
+   useEffect(() => {
+      console.log("đang chạy useEffect resize", JSON.parse(localStorage.getItem("darkMode")));
       const handleResize = () => {
          setWindowWidth(window.innerWidth);
       };
       window.addEventListener("resize", handleResize);
       return () => window.removeEventListener("resize", handleResize);
    }, [windowWidth]);
+
+   if (isLoading) {
+      return <Spinner />;
+   }
 
    return (
       <BrowserRouter>

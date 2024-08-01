@@ -11,6 +11,8 @@ import SchoolIcon from "@mui/icons-material/School";
 import {useTheme} from "styled-components";
 import {education} from "../../data/constants";
 import EducationCard from "../Cards/EducationCard";
+import {GetRandomColor} from "../../utils/randomColor";
+import {colors} from "@mui/material";
 
 const Container = styled.div`
    display: flex;
@@ -109,7 +111,8 @@ const Index = (darkMode) => {
                           </TimelineOppositeContent>
                           <TimelineSeparator>
                              <TimelineConnector />
-                             <TimelineDot>
+                             <TimelineDot
+                                style={{color: GetRandomColor(), padding: "7px", backgroundColor: "white"}}>
                                 <SchoolIcon />
                              </TimelineDot>
                              <TimelineConnector />

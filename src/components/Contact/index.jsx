@@ -92,17 +92,30 @@ const ContactInput = styled.input`
    background-color: transparent;
    border: 1px solid ${({theme}) => theme.text_secondary};
    outline: none;
-   font-size: 25px;
+   font-size: 17px;
    color: ${({theme}) => theme.text_primary};
    border-radius: 12px;
-   padding: 12px 16px;
+   padding: 10px 10px;
    &:focus {
       border: 1px solid ${({theme}) => theme.primary};
+   }
+   @media (max-width: 974px) {
+      font-size: 20px;
+   }
+   @media (max-width: 768px) {
+      font-size: 18px;
+   }
+   @media (max-width: 480px) {
+      font-size: 16px;
+   }
+   @media (max-width: 320px) {
+      font-size: 16px;
    }
 `;
 
 const ContactInputMessage = styled.textarea`
    flex: 1;
+   max-width: 100%;
    background-color: transparent;
    border: 1px solid ${({theme}) => theme.text_secondary};
    outline: none;
@@ -110,8 +123,24 @@ const ContactInputMessage = styled.textarea`
    color: ${({theme}) => theme.text_primary};
    border-radius: 12px;
    padding: 12px 16px;
+   resize: vertical;
+   height: 150px;
+   max-height: 400px;
+   overflow: hidden;
    &:focus {
       border: 1px solid ${({theme}) => theme.primary};
+   }
+   @media (max-width: 974px) {
+      font-size: 20px;
+   }
+   @media (max-width: 768px) {
+      font-size: 17px;
+   }
+   @media (max-width: 480px) {
+      font-size: 14px;
+   }
+   @media (max-width: 320px) {
+      font-size: 12px;
    }
 `;
 
@@ -128,6 +157,23 @@ const ContactButton = styled.input`
    color: ${({theme}) => theme.text_primary};
    font-size: 18px;
    font-weight: 600;
+`;
+
+const Label = styled.label`
+   font-size: 20px;
+   color: ${({theme}) => theme.text_primary};
+   @media (max-width: 974px) {
+      font-size: 22px;
+   }
+   @media (max-width: 768px) {
+      font-size: 19px;
+   }
+   @media (max-width: 480px) {
+      font-size: 15px;
+   }
+   @media (max-width: 320px) {
+      font-size: 13px;
+   }
 `;
 
 const Contact = () => {
@@ -153,10 +199,16 @@ const Contact = () => {
             <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
             <ContactForm ref={form} onSubmit={handleSubmit}>
                <ContactTitle>Contact for more information</ContactTitle>
+               <Label>Email</Label>
                <ContactInput placeholder='Your Email' name='from_email' />
+               <Label>Phone</Label>
+               <ContactInput placeholder='Your Phone Ex: (+84) ...' name='from_phone' />
+               <Label>Name</Label>
                <ContactInput placeholder='Your Name' name='from_name' />
+               <Label>Subject</Label>
                <ContactInput placeholder='Subject' name='subject' />
-               <ContactInputMessage placeholder='Message' rows='4' name='message' />
+               <Label>Message</Label>
+               <ContactInputMessage placeholder='Message' name='message' />
                <ContactButton type='submit' value='Send' />
             </ContactForm>
             <Snackbar

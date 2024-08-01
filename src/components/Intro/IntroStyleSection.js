@@ -1,5 +1,6 @@
 import styled, {keyframes} from "styled-components";
 import {Link as LinkR} from "react-router-dom";
+import {Container} from "./../Projects/ProjectsStyle";
 export const HeroContainer = styled.div`
    background: ${({theme}) => theme.card_light};
    display: flex;
@@ -264,4 +265,15 @@ export const ButtonAbout = styled(LinkR)`
       padding: 12px 0;
       font-size: 18px;
    } 
+`;
+
+export const ContainerFollow = styled(Container)`
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 12px;
+   margin-top: 20px;
+   // @media (max-width: 640px) {
+   //    flex-direction: column;
+   // }
 `;
