@@ -144,19 +144,49 @@ const ContactInputMessage = styled.textarea`
    }
 `;
 
-const ContactButton = styled.input`
-   width: 100%;
-   text-decoration: none;
-   text-align: center;
-   background-color: #f8ef42;
-   background-image: linear-gradient(315deg, #f8ef42 0%, #0fd64f 74%);
-   padding: 13px 16px;
-   margin-top: 2px;
-   border-radius: 12px;
-   border: none;
-   color: ${({theme}) => theme.text_primary};
+const ContactButton = styled.button`
+   align-items: center;
+   background: rgb(34, 195, 42);
+   background: linear-gradient(254deg, rgba(34, 195, 42, 1) 0%, rgba(253, 187, 45, 1) 100%);
+   border: 0;
+   border-radius: 8px;
+   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+   box-sizing: border-box;
+   color: #ffffff;
+   display: flex;
+   font-family: Phantomsans, sans-serif;
    font-size: 18px;
-   font-weight: 600;
+   justify-content: center;
+   line-height: 1em;
+   max-width: 100%;
+   min-width: 140px;
+   padding: 3px;
+   text-decoration: none;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+   white-space: nowrap;
+   cursor: pointer;
+   transition: all 0.3s;
+   &:hover {
+      outline: 0;
+   }
+   &:active {
+      outline: 0;
+      transform: scale(0.9);
+   }
+`;
+
+const SpanButtonSend = styled.span`
+   background-color: rgb(5, 6, 45);
+   padding: 16px 24px;
+   border-radius: 6px;
+   width: 100%;
+   height: 100%;
+   transition: 300ms;
+   &:hover {
+      background: none;
+   }
 `;
 
 const Label = styled.label`
@@ -209,7 +239,9 @@ const Contact = () => {
                <ContactInput placeholder='Subject' name='subject' />
                <Label>Message</Label>
                <ContactInputMessage placeholder='Message' name='message' />
-               <ContactButton type='submit' value='Send' />
+               <ContactButton type='submit' value='Send'>
+                  <SpanButtonSend>Send</SpanButtonSend>
+               </ContactButton>
             </ContactForm>
             <Snackbar
                open={open}

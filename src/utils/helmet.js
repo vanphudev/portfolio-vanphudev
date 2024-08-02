@@ -30,7 +30,7 @@ const MyComponent = () => (
             itemprop='description'
             content='Nguyễn Văn Phú - Portfolio vanphudev - Frontend Developer - Information Technology'
          />
-         <meta itemprop='image' content='https://www.vanphudev.id.vn/Image_Personal.jpg' />
+         <meta itemprop='image' content='https://www.vanphudev.id.vn/image_shares/Image_Personal.jpg' />
          <meta name='geo.region' content='VN-SG' />
          <meta name='geo.placename' content='Ho Chi Minh City' />
          <meta name='geo.position' content='10.754792;106.6952276' />
@@ -67,7 +67,6 @@ const MyComponent = () => (
         `}
          </script>
       </Helmet>
-      {/* Your component content */}
    </>
 );
 

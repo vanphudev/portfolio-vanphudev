@@ -1,0 +1,36 @@
+.tooltip-container-TooltipGithub .profile {
+   background: #2a2b2f;
+   border-radius: 10px 15px;
+   padding: 10px;
+   border: 1px solid rgba(11, 63, 95, 1);
+}
+
+.tooltip-container-TooltipGithub .icon:hover.layer span {
+   transform: rotate(-35deg) skew(20deg);
+   box-shadow: 0 0 30px rgb(0, 0, 0), 0 0 40px rgba(0, 0, 0, 0.7);
+}
+
+.tooltip-container-TooltipGithub.tooltip-container .layer span.fab {
+   font-size: 30px;
+   line-height: 64px;
+   text-align: center;
+   background: #ffffff;
+}
+
+.tooltip-container-TooltipGithub .img {
+   width: 50px;
+   height: 50px;
+   font-size: 25px;
+   font-weight: 700;
+   border: 1px solid #1da1f2;
+   border-radius: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: #fff;
+}
+.tooltip-container-TooltipGithub .name {
+   font-size: 17px;
+   font-weight: 700;
+   color: #1da1f2;
+}

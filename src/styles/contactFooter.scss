@@ -1,0 +1,99 @@
+.contactFooter {
+   list-style: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 20px;
+}
+
+@media screen and (max-width: 480px) {
+   .contactFooter {
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+}
+
+
+.contactFooter .icon-content {
+   margin: 0 10px;
+   position: relative;
+}
+.contactFooter .icon-content .tooltip {
+   position: absolute;
+   top: -30px;
+   left: 50%;
+   transform: translateX(-50%);
+   color: #ffffff;
+   padding: 6px 10px;
+   border-radius: 15px;
+   opacity: 0;
+   visibility: hidden;
+   font-size: 14px;
+   transition: all 0.3s ease;
+}
+.contactFooter .icon-content:hover .tooltip {
+   opacity: 1;
+   visibility: visible;
+   top: -50px;
+}
+.contactFooter .icon-content a {
+   position: relative;
+   overflow: hidden;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 50px;
+   height: 50px;
+   border-radius: 30%;
+   color: #4d4d4d;
+   background-color: #ffff;
+   transition: all 0.3s ease-in-out;
+}
+.contactFooter .icon-content a:hover {
+   background-color: transparent;
+   box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 50%);
+}
+.contactFooter .icon-content a svg {
+   position: relative;
+   z-index: 1;
+   width: 30px;
+   height: 30px;
+}
+.contactFooter .icon-content a:hover {
+   color: white;
+}
+.contactFooter .icon-content a .filled {
+   position: absolute;
+   top: auto;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 0;
+   background-color: #000;
+   transition: all 0.3s ease-in-out;
+}
+.contactFooter .icon-content a:hover .filled {
+   height: 100%;
+}
+.contactFooter .icon-content a[data-social="github"] .filled,
+.contactFooter .icon-content a[data-social="github"] ~ .tooltip {
+   background-color: #24262a;
+}
+.contactFooter .icon-content a[data-social="linkedin"] .filled,
+.contactFooter .icon-content a[data-social="linkedin"] ~ .tooltip {
+   background-color: #0866ff;
+}
+.contactFooter .icon-content a[data-social="facebook"] .filled,
+.contactFooter .icon-content a[data-social="facebook"] ~ .tooltip {
+   background-color: #0866ff;
+}
+.contactFooter .icon-content a[data-social="instagram"] .filled,
+.contactFooter .icon-content a[data-social="instagram"] ~ .tooltip {
+   background: linear-gradient(45deg, #405de6, #5b51db, #b33ab4, #c135b4, #e1306c, #fd1f1f);
+}
+
+.contactFooter .icon-content a[data-social="zalo"] .filled,
+.contactFooter .icon-content a[data-social="zalo"] ~ .tooltip {
+   background-color: #0091ff;
+}

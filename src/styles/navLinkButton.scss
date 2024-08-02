@@ -1,0 +1,37 @@
+.navLinkButton {
+   display: inline-block;
+   text-decoration: none;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   position: relative;
+   overflow: hidden;
+   transition: color 0.5s;
+   backdrop-filter: blur(10px);
+}
+
+.navLinkButton:hover {
+   color: #fff;
+}
+
+.navLinkButton::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: -50px;
+   width: 150%;
+   height: 100%;
+   background: rgb(34, 195, 42);
+   background: linear-gradient(
+      254deg,
+      rgba(34, 195, 42, 0.5522584033613445) 0%,
+      rgba(253, 187, 45, 0.4990371148459384) 100%
+   );
+   transform: scaleX(0) skewX(35deg);
+   transform-origin: left;
+   z-index: -1;
+   transition: transform 0.7s;
+}
+
+.navLinkButton:hover::before {
+   transform: scaleX(2) skewX(35deg);
+}

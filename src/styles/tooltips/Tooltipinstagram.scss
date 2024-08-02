@@ -1,0 +1,42 @@
+.tooltip-container-TooltipInstagram .profile {
+   background: #2a2b2f;
+   border-radius: 10px 15px;
+   padding: 10px;
+   border: 1px solid #52382f;
+}
+
+.tooltip-container-TooltipInstagram .layer span {
+   color: #e6683c;
+   border-color: #e6683c;
+}
+
+.tooltip-container-TooltipInstagram .icon:hover.layer span {
+   box-shadow: -1px 1px 3px #e6683c;
+}
+
+.tooltip-container-TooltipInstagram .instagramSVG {
+   font-size: 25px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: #ffffff;
+}
+
+.tooltip-container-TooltipInstagram .name {
+   font-size: 17px;
+   font-weight: 700;
+   color: #e6683c;
+}
+
+.tooltip-container-TooltipInstagram .img {
+   width: 50px;
+   height: 50px;
+   font-size: 25px;
+   font-weight: 700;
+   border: 1px solid #e6683c;
+   border-radius: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: #fff;
+}

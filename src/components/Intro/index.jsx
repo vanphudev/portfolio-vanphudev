@@ -13,17 +13,17 @@ import {
    ButtonAbout,
    Img,
    ContainerFollow,
-   SocialMediaIcon,
+   ContactForMeTagH2,
 } from "./IntroStyleSection.js";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import IntroBgAnimation from "../IntroBgAnimation/index";
 import {Typewriter} from "react-simple-typewriter";
 import {Biography} from "../../data/constants.js";
+import Logo from "../../assets/images/Image_Personal.jpg";
+import {useTheme} from "styled-components";
+import {TooltipInstagram, TooltipLinkedin, Tooltipfacebook, TooltipGithub, TooltipZalo, TooltipGmail} from "./tooltip.jsx";
 
 const IntroSections = () => {
+   const theme = useTheme();
    return (
       <>
          <div id='about' style={{position: "relative", zIndex: "2"}}>
@@ -57,23 +57,89 @@ const IntroSections = () => {
                      <ButtonAbout to='/cv-online'>View CV Online</ButtonAbout>
                   </HeroLeftContainer>
                   <HeroRightContainer id='Right'>
-                     <Img src={Biography.image} alt='hero-image' />
+                     <Img src={Logo} alt='hero-image' />
                   </HeroRightContainer>
                </HeroInnerContainer>
             </HeroContainer>
+            <ContactForMeTagH2>Feel free to reach out for any inquiries or collaborations.</ContactForMeTagH2>
             <ContainerFollow>
-               <SocialMediaIcon href={Biography.facebook} target='display'>
-                  <FacebookIcon fontSize='' style={{fontSize: "70px"}} />
-               </SocialMediaIcon>
-               <SocialMediaIcon href={Biography.github} target='display'>
-                  <GitHubIcon style={{fontSize: "70px"}} />
-               </SocialMediaIcon>
-               <SocialMediaIcon href={Biography.linkedin} target='display'>
-                  <LinkedInIcon style={{fontSize: "70px"}} />
-               </SocialMediaIcon>
-               <SocialMediaIcon href={Biography.instagram} target='display'>
-                  <InstagramIcon style={{fontSize: "70px"}} />
-               </SocialMediaIcon>
+               {Biography.listInfo &&
+                  Biography.listInfo.map((item, index) => {
+                     const renderTooltip = (item) => {
+                        switch (item.id) {
+                           case "LinkedIn":
+                              return (
+                                 <TooltipLinkedin
+                                    key={index}
+                                    nameUser={item.id}
+                                    username={item.username}
+                                    link={item.link}
+                                    text={item.text}
+                                    ui={item.ui}
+                                 />
+                              );
+                           case "Instagram":
+                              return (
+                                 <TooltipInstagram
+                                    key={index}
+                                    nameUser={item.id}
+                                    username={item.username}
+                                    link={item.link}
+                                    text={item.text}
+                                    ui={item.ui}
+                                 />
+                              );
+                           case "Facebook":
+                              return (
+                                 <Tooltipfacebook
+                                    key={index}
+                                    nameUser={item.id}
+                                    username={item.username}
+                                    link={item.link}
+                                    text={item.text}
+                                    ui={item.ui}
+                                 />
+                              );
+                           case "Github":
+                              return (
+                                 <TooltipGithub
+                                    key={index}
+                                    nameUser={item.id}
+                                    username={item.username}
+                                    link={item.link}
+                                    text={item.text}
+                                    ui={item.ui}
+                                    theme={theme.isDark}
+                                 />
+                              );
+                           case "Zalo":
+                              return (
+                                 <TooltipZalo
+                                    key={index}
+                                    nameUser={item.id}
+                                    username={item.username}
+                                    link={item.link}
+                                    text={item.text}
+                                    ui={item.ui}
+                                 />
+                              );
+                           case "Gmail":
+                              return (
+                                 <TooltipGmail
+                                    key={index}
+                                    nameUser={item.id}
+                                    username={item.username}
+                                    link={item.link}
+                                    text={item.text}
+                                    ui={item.ui}
+                                 />
+                              );
+                           default:
+                              return null;
+                        }
+                     };
+                     return renderTooltip(item);
+                  })}
             </ContainerFollow>
          </div>
       </>

@@ -17,6 +17,8 @@ import {Biography} from "../../data/constants";
 import {useTheme} from "styled-components";
 import {StyleSheetManager} from "styled-components";
 import isPropValid from "@emotion/is-prop-valid";
+import Logo from "../../assets/icon/logohome.svg";
+import "../../styles/navLinkButton.scss";
 
 const Navbar = (setDarkMode, darkMode) => {
    const [isOpen, setIsOpen] = useState(false);
@@ -65,7 +67,7 @@ const Navbar = (setDarkMode, darkMode) => {
                         cursor: "pointer",
                      }}>
                      <Span>
-                        <img src={Biography.LogoDev} alt='logo' style={{width: "100%"}} />
+                        <img src={Logo} alt='logo' style={{width: "100%"}} />
                      </Span>
                   </div>
                </NavLogo>
@@ -77,10 +79,18 @@ const Navbar = (setDarkMode, darkMode) => {
                   />
                </MobileIcon>
                <NavItems>
-                  <NavLink href='#about'>About</NavLink>
-                  <NavLink href='#skills'>Skills</NavLink>
-                  <NavLink href='#projects'>Projects</NavLink>
-                  <NavLink href='#education'>Education</NavLink>
+                  <NavLink href='#about' className='navLinkButton'>
+                     About
+                  </NavLink>
+                  <NavLink href='#skills' className='navLinkButton'>
+                     Skills
+                  </NavLink>
+                  <NavLink href='#projects' className='navLinkButton'>
+                     Projects
+                  </NavLink>
+                  <NavLink href='#education' className='navLinkButton'>
+                     Education
+                  </NavLink>
                </NavItems>
                <ButtonContainer>
                   <GitHubButton href={Biography.github} target='_blank' darkMode={darkMode}>

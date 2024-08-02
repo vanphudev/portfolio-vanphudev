@@ -1,0 +1,41 @@
+.tooltip-container-TooltipLinkedin .profile {
+   background: #2a2b2f;
+   border-radius: 10px 15px;
+   padding: 10px;
+   border: 1px solid rgba(11, 63, 95, 1);
+}
+
+.tooltip-container-TooltipLinkedin .layer span {
+   color: #1da1f2;
+   border-color: #1da1f2;
+}
+
+.tooltip-container-TooltipLinkedin .icon:hover.layer span {
+   box-shadow: -1px 1px 3px #1da1f2;
+}
+
+.tooltip-container-TooltipLinkedin.tooltip-container .layer span.fab {
+   font-size: 30px;
+   line-height: 64px;
+   text-align: center;
+   fill: #1da1f2;
+   background: #ffffff;
+}
+
+.tooltip-container-TooltipLinkedin .img {
+   width: 50px;
+   height: 50px;
+   font-size: 25px;
+   font-weight: 700;
+   border: 1px solid #1da1f2;
+   border-radius: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: #fff;
+}
+.tooltip-container-TooltipLinkedin .name {
+   font-size: 17px;
+   font-weight: 700;
+   color: #1da1f2;
+}

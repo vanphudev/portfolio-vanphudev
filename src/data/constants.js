@@ -12,6 +12,54 @@ export const Biography = {
    zalo: "https://ln.run/-PmEx",
    cv_download: "https://www.vanphudev.id.vn/cv_shares/CV-NguyenVanPhu-Internship-FrontendDeveloper.pdf",
    cv_view: "https://tinyurl.com/yazam8ur",
+   gmail: "mailto:nguyenvanphu.hufi@gmail.com?subject=Hello%20Nguyen%20Van%20Phu",
+   listInfo: [
+      {
+         id: "LinkedIn",
+         name: "LinkedIn",
+         link: "https://www.linkedin.com/in/vanphudev",
+         username: "vanphudev",
+         ui: "L",
+         text: "LinkedIn",
+      },
+      {
+         id: "Github",
+         name: "GitHub",
+         link: "https://github.com/vanphudev",
+         username: "vanphudev",
+         ui: "G",
+         text: "GitHub",
+      },
+      {
+         id: "Facebook",
+         name: "Facebook",
+         link: "https://www.facebook.com/vanphu.huit",
+         username: "vanphu.huit",
+         ui: "F",
+      },
+      {
+         id: "Instagram",
+         name: "Instagram",
+         link: "https://www.instagram.com/vanphudev",
+         username: "vanphudev",
+         ui: "I",
+         text: "Instagram",
+      },
+      {
+         id: "Zalo",
+         name: "Zalo",
+         link: "https://ln.run/-PmEx",
+         username: "nguyenvanphu",
+         ui: "Z",
+      },
+      {
+         id: "Gmail",
+         name: "Gmail",
+         link: "mailto:nguyenvanphu.hufi@gmail.com?subject=Hello%20Nguyen%20Van%20Phu",
+         username: "nguyenvanphu.hufi@gmail.com",
+         ui: "G",
+      },
+   ],
 };
 
 export const skills = [

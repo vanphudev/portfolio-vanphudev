@@ -1,11 +1,12 @@
 import styled, {keyframes} from "styled-components";
 import {Link as LinkR} from "react-router-dom";
+import Contact from "./../Contact/index";
 export const HeroContainer = styled.div`
    background: ${({theme}) => theme.card_light};
    display: flex;
    justify-content: center;
    position: relative;
-   padding: 80px 30px;
+   padding: 40px 30px;
    @media (max-width: 960px) {
       padding: 66px 16px;
    }
@@ -203,11 +204,10 @@ const gradient = keyframes`
 `;
 
 export const ResumeButton = styled.a`
-   -webkit-appearance: button;
-   -moz-appearance: button;
    appearance: button;
    text-decoration: none;
    width: 95%;
+   box-sizing: border-box;
    max-width: 300px;
    text-align: center;
    padding: 16px 0;
@@ -235,24 +235,23 @@ export const ResumeButton = styled.a`
 `;
 
 export const ButtonAbout = styled(LinkR)`
-   -webkit-appearance: button;
-   -moz-appearance: button;
    appearance: button;
    text-decoration: none;
    width: 95%;
    max-width: 300px;
    text-align: center;
+   box-sizing: border-box;
    padding: 16px 0;
    color:${({theme}) => theme.text_primary};
    border-radius: 20px;
    cursor: pointer;
    font-size: 20px;
    font-weight: 600;
-   border: 3px solid transparent; 
    outline: 3px solid #59a646; 
    padding: 10px 20px;
    transition: all 0.3s ease;
    box-shadow:#98c230 0px 5px 15px;
+   z-index: 100;
    &:hover {
       transform: scale(1.05);
       transition: all 0.4s ease-in-out;
@@ -270,14 +269,12 @@ export const ContainerFollow = styled.div`
    display: flex;
    justify-content: center;
    align-items: center;
-   flex-direction: column;
-   gap: 12px;
-   position: fixed;
-   left: 0;
-   top: 50%;
-   transform: translateY(-50%);
-   z-index: 999;
-   @media (max-width: 1400px) {
+   flex-wrap: wrap;
+   gap: 100px;
+   margin-top: 20px;
+   margin-bottom: 50px;
+   z-index: 9999;
+   @media (max-width: 768px) {
       display: none;
    }
 `;
@@ -289,5 +286,15 @@ export const SocialMediaIcon = styled.a`
    transition: color 0.2s ease-in-out;
    &:hover {
       color: ${({theme}) => theme.primary};
+   }
+`;
+
+export const ContactForMeTagH2 = styled.h2`
+   text-align: center;
+   margin-bottom: 50px;
+   margin-top: 20px;
+   color: ${({theme}) => theme.text_primary};
+   @media (max-width: 768px) {
+      display: none;
    }
 `;

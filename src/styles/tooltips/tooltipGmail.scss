@@ -1,0 +1,41 @@
+.tooltip-container-TooltipGmail .profile {
+   background: #2a2b2f;
+   border-radius: 10px 15px;
+   padding: 10px;
+   border: 1px solid rgba(34, 195, 42, 0.6895133053221288);
+}
+
+.tooltip-container-TooltipGmail .layer span {
+   color: #4caf50;
+   border-color: #4caf50;
+}
+
+.tooltip-container-TooltipGmail .icon:hover.layer span {
+   transform: rotate(-35deg) skew(20deg);
+   box-shadow: 0 0 30px #4caf50, 0 0 40px #4caf50;
+}
+
+.tooltip-container-TooltipGmail.tooltip-container .layer span.fab {
+   font-size: 30px;
+   line-height: 64px;
+   text-align: center;
+   background: #ffffff;
+}
+
+.tooltip-container-TooltipGmail .img {
+   width: 50px;
+   height: 50px;
+   font-size: 25px;
+   font-weight: 700;
+   border: 1px solid #4caf50;
+   border-radius: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: #fff;
+}
+.tooltip-container-TooltipGmail .name {
+   font-size: 17px;
+   font-weight: 700;
+   color: #4caf50;
+}

@@ -90,14 +90,15 @@ export const NavLink = styled.a`
    cursor: pointer;
    transition: all 0.02s ease-in-out;
    text-decoration: none;
-   padding: 6px 0px;
+   padding: 10px;
+   border-radius: 10px;
    position: relative;
    z-index: 1;
    &:hover {
-      color: ${({theme}) => theme.primary};
+      color: ${({theme}) => theme.white};
    }
    &:active {
-      border-bottom: 2px solid ${({theme}) => theme.primary};
+      border-bottom: 4px solid ${({theme}) => theme.primary};
    }
 `;
 
