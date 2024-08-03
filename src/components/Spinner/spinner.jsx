@@ -39,7 +39,7 @@ const Spinner = () => {
                   </li>
                </ul>
             </div>
-            <span>Loading</span>
+            <span>Please waiting, Loading ...</span>
          </div>
       </div>
    );

@@ -72,7 +72,7 @@ const Tag = styled.span`
    font-size: 12px;
    font-weight: 400;
    color: ${({theme}) => theme.primary};
-   background-color: ${({theme}) => theme.primary + 15};
+   background-color: ${({theme}) => theme.primary + 40};
    padding: 2px 8px;
    border-radius: 10px;
 `;
@@ -142,7 +142,7 @@ const Avatar = styled.img`
 const ProjectCards = ({project, setOpenModal}) => {
    return (
       <Card onClick={() => setOpenModal({state: true, project: project})}>
-         <Image src={project.image} />
+         <Image src={project.imageBase64} />
          <Tags>
             {project.tags?.map((tag, index) => (
                <Tag key={index}>{tag}</Tag>

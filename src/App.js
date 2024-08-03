@@ -43,7 +43,7 @@ function App() {
          return new Promise((resolve) => {
             setTimeout(() => {
                resolve();
-            }, 2000);
+            }, 1000);
          });
       };
       loadData().then(() => {

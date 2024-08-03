@@ -8,7 +8,7 @@ const MyComponent = () => (
             property='og:description'
             content="Welcome to my portfolio. I'm Nguyễn Văn Phú, a Frontend Developer. Here, you can explore my work in Information Technology. Feel free to reach out if you have any questions."
          />
-         <meta property='og:image' content='https://www.vanphudev.id.vn/image_shares/Image_Personal.jpg' />
+         <meta property='og:image' content='https://www.vanphudev.id.vn/image_shares/Image_Personal.webp' />
          <meta property='og:image:alt' content='Nguyễn Văn Phú - vanphudev' />
          <meta property='og:url' content='https://www.vanphudev.id.vn' />
          <meta property='og:site_name' content='www.vanphudev.id.vn' />
@@ -30,7 +30,7 @@ const MyComponent = () => (
             itemprop='description'
             content='Nguyễn Văn Phú - Portfolio vanphudev - Frontend Developer - Information Technology'
          />
-         <meta itemprop='image' content='https://www.vanphudev.id.vn/image_shares/Image_Personal.jpg' />
+         <meta itemprop='image' content='https://www.vanphudev.id.vn/image_shares/Image_Personal.webp' />
          <meta name='geo.region' content='VN-SG' />
          <meta name='geo.placename' content='Ho Chi Minh City' />
          <meta name='geo.position' content='10.754792;106.6952276' />

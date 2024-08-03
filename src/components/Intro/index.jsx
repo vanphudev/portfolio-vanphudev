@@ -18,9 +18,16 @@ import {
 import IntroBgAnimation from "../IntroBgAnimation/index";
 import {Typewriter} from "react-simple-typewriter";
 import {Biography} from "../../data/constants.js";
-import Logo from "../../assets/images/Image_Personal.jpg";
+// import Logo from "../../assets/images/Image_Personal.webp";
 import {useTheme} from "styled-components";
-import {TooltipInstagram, TooltipLinkedin, Tooltipfacebook, TooltipGithub, TooltipZalo, TooltipGmail} from "./tooltip.jsx";
+import {
+   TooltipInstagram,
+   TooltipLinkedin,
+   Tooltipfacebook,
+   TooltipGithub,
+   TooltipZalo,
+   TooltipGmail,
+} from "./tooltip.jsx";
 
 const IntroSections = () => {
    const theme = useTheme();
@@ -57,7 +64,7 @@ const IntroSections = () => {
                      <ButtonAbout to='/cv-online'>View CV Online</ButtonAbout>
                   </HeroLeftContainer>
                   <HeroRightContainer id='Right'>
-                     <Img src={Logo} alt='hero-image' />
+                     <Img src={Biography.imageBase64} alt='hero-image' />
                   </HeroRightContainer>
                </HeroInnerContainer>
             </HeroContainer>
